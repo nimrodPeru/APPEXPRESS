@@ -10,13 +10,15 @@ app.set('view engine','ejs')
 /*set - directorio */
 //console.log(__dirname)
 app.set('views', __dirname + '/views')
+/*set -static directorio*/
+app.use(express.static('public'))
 /*midleware*/
 app.use(
-    function(req,res,next){ 
-        console.log("request url : " + req.url) 
+    function(req,res,next){
+        console.log("request url : " + req.url)
         next()
     }
-    
+
 );
 
 app.use((req,res,next)=>{
