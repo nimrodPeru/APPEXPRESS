@@ -10,7 +10,7 @@ app.set('view engine','ejs')
 /*set - directorio */
 //console.log(__dirname)
 app.set('views', __dirname + '/views')
-/*set -static directorio*/
+/*set -static directorio img-js-css*/
 app.use(express.static('public'))
 /*midleware*/
 app.use(
